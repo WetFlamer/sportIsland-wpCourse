@@ -1,8 +1,8 @@
 <?php
 add_action('after_setup_theme', 'si_setup');
 add_action('wp_enqueue_scripts', 'si_scripts');
-
 add_filter('show_admin_bar', '__return_false');
+add_action( 'widgets_init', 'si_register' );
 
 function si_setup()
 {
@@ -30,6 +30,51 @@ function si_scripts()
         'all'
     );
 
+}
+
+function si_register() {
+    register_sidebar([
+        'name' => 'Контакты в шапке сайта',
+        'id' => 'si_header',
+        'before_widget' => null,
+        'after_widget' => null
+    ]);
+    register_sidebar([
+        'name' => 'Контакты в подвале сайта',
+        'id' => 'si_footer',
+        'before_widget' => null,
+        'after_widget' => null
+    ]);
+    register_sidebar([
+        'name' => 'Сайд-бар в футоре - Колонка - 1',
+        'id' => 'si_footer-column-1',
+        'before_widget' => null,
+        'after_widget' => null
+    ]);
+    register_sidebar([
+        'name' => 'Сайд-бар в футоре - Колонка - 2',
+        'id' => 'si_footer-column-2',
+        'before_widget' => null,
+        'after_widget' => null
+    ]);
+    register_sidebar([
+        'name' => 'Сайд-бар в футоре - Колонка - 3',
+        'id' => 'si_footer-column-3',
+        'before_widget' => null,
+        'after_widget' => null
+    ]);
+    register_sidebar([
+        'name' => 'Карта',
+        'id' => 'si_map',
+        'before_widget' => null,
+        'after_widget' => null
+    ]);
+    register_sidebar([
+        'name' => 'Сайдбар под картой',
+        'id' => 'si_after-map',
+        'before_widget' => null,
+        'after_widget' => null
+    ]);
 }
 
 function _si_assets_path($path)
