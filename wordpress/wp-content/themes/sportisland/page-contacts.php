@@ -23,7 +23,7 @@ get_header();
             <h1 class="contacts__h main-heading">Контакты</h1>
             <div class="map">
                 <a href="#" class="map__fallback">
-                    <img src="./img/map.jpg" alt="Карта клуба SportIsland">
+                    <img src="<?php echo _si_assets_path('/img/map.jpg')?>" alt="Карта клуба SportIsland">
                     <span class="sr-only"> Карта </span>
                 </a>
                 <iframe
