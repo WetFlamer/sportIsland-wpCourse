@@ -21,14 +21,14 @@ class SI_Widget_Contacts extends WP_Widget
                 Введите номер телефона:
             </label>
             <input id="<?php echo $this->get_field_id('id-phone'); ?>" type="text"
-                name="<?php echo $this->get_field_name('phone'); ?>" value="<?php echo $instance['text']; ?>" class="widefat">
+                name="<?php echo $this->get_field_name('phone'); ?>" value="<?php echo $instance['phone']; ?>" class="widefat">
         </p>
         <p>
             <label for="<?php echo $this->get_field_id('id-address'); ?>">
                 Введите адрес:
             </label>
             <input id="<?php echo $this->get_field_id('id-address'); ?>" type="text"
-                name="<?php echo $this->get_field_name('address'); ?>" value="<?php echo $instance['text']; ?>" class="widefat">
+                name="<?php echo $this->get_field_name('address'); ?>" value="<?php echo $instance['address']; ?>" class="widefat">
         </p>
 
         <?php
