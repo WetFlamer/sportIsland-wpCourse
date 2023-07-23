@@ -3,7 +3,9 @@
 $widgets = [
 'widget-text.php',
 'widget-contacts.php',
-'widget-social.php'
+'widget-social.php',
+'widget-map.php'
+
 ];
 
 foreach($widgets as $w) {
@@ -90,6 +92,7 @@ function si_register() {
     register_widget( 'si_widget_text' );
     register_widget('si_widget_contacts');
     register_widget('si_widget_social');
+    register_widget('si_widget_iframe');
 
 }
 
