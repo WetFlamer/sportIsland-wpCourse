@@ -1,4 +1,8 @@
 <?php
+
+require_once(__DIR__ . '/inc/widget-text.php');
+require_once(__DIR__ . '/inc/widget-contacts.php');
+
 add_action('after_setup_theme', 'si_setup');
 add_action('wp_enqueue_scripts', 'si_scripts');
 add_filter('show_admin_bar', '__return_false');
@@ -75,6 +79,9 @@ function si_register() {
         'before_widget' => null,
         'after_widget' => null
     ]);
+
+    register_widget( 'si_widget_text' );
+    register_widget('si_widget_contacts');
 }
 
 function _si_assets_path($path)

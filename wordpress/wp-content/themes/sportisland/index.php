@@ -1,7 +1,6 @@
 <?php
 get_header();
-if( is_home()):
-    ?>
+if( is_home()): ?>
 
 <main class="main-content">
     <h1 class="sr-only">Страница категорий блога на сайте спорт-клуба SportIsland</h1>
@@ -78,8 +77,7 @@ if( is_home()):
         </div>
     </section>
 </main>
-<?php 
-else: ?>
+<?php else: ?>
 
 <main class="main-content">
     <h1 class="sr-only">Страница на сайте спорт-клуба SportIsland</h1>
@@ -157,6 +155,5 @@ else: ?>
     </section>
 </main>
 
-<?php
-get_footer();
-?>
+<?php endif;
+get_footer(); ?>
