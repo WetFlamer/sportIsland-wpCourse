@@ -87,3 +87,5 @@ class SI_Widget_info extends WP_Widget
     }
 }
 ;
+
+
